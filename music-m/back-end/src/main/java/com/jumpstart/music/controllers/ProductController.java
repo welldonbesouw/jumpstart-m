@@ -16,7 +16,7 @@ import com.jumpstart.music.models.Product;
 import com.jumpstart.music.repository.NewProductRepository;
 import com.jumpstart.music.repository.ProductRepository;
 
-@CrossOrigin("http://localhost:8081")
+//@CrossOrigin("http://localhost:8081")
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
