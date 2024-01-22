@@ -67,16 +67,6 @@ describe("Features Test", () => {
     cy.getDataTest("search-input-test").type("drums");
     cy.getDataTest("search-button-test").click();
   });
-
-  //   it("Testing picture uploading", () => {
-  //     cy.fixture("the-rock.jpeg").then((fileContent) => {
-  //       cy.get('input[type="file"]').attachFile({
-  //         fileContent: fileContent.toString(),
-  //         fileName: "the-rock.jpeg",
-  //         mimeType: "image/jpeg",
-  //       });
-  //     });
-  //   });
 });
 
 describe("My Account Test", () => {
