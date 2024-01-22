@@ -1,6 +1,6 @@
 import "cypress-file-upload";
 
-describe("first-test", () => {
+describe("Features Test", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
   });
