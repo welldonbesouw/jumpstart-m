@@ -102,6 +102,7 @@ describe("My Account Test", () => {
     cy.getDataTest("username").clear().type("kevinsanjaya");
     cy.getDataTest("email").clear().type("kevinsanjaya@yahoo.com");
     cy.getDataTest("address").clear().type("Jalan Medan Merdeka No. 1");
+    cy.getDataTest("update-button").click();
     cy.wait(2000);
 
     cy.fixture("the-rock.png").then(() => {
