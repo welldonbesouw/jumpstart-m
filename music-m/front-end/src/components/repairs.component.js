@@ -141,6 +141,7 @@ class Repairs extends Component {
                           value={this.state.name}
                           validations={[required]}
                           className="form-control w-100"
+                          data-test="repairs-name"
                         />
                       </div>
                       <div className="mb-3">
@@ -154,6 +155,7 @@ class Repairs extends Component {
                           value={this.state.phoneNumber}
                           validations={[required]}
                           className="form-control w-100"
+                          data-test="repairs-phone-number"
                         />
                       </div>
                       <div className="mb-3">
@@ -167,6 +169,7 @@ class Repairs extends Component {
                           value={this.state.instrument}
                           validations={[required]}
                           className="form-control w-100"
+                          data-test="repairs-instrument"
                         />
                       </div>
                       <div className="mb-3">
@@ -180,10 +183,16 @@ class Repairs extends Component {
                           value={this.state.problem}
                           validations={[required]}
                           className="form-control w-100"
+                          data-test="repairs-problem"
                         />
                       </div>
                       <div className="d-grid gap-2">
-                        <button className="btn btn-dark">Submit</button>
+                        <button
+                          className="btn btn-dark"
+                          data-test="submit-repairs-test"
+                        >
+                          Submit
+                        </button>
                       </div>
                     </>
                   )}

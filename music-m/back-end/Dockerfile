@@ -1,30 +1,7 @@
-#### Stage 1: Build the application
-FROM eclipse-temurin:17-jdk-alpine as build
-
-EXPOSE 8080
+FROM eclipse-temurin:17-jdk-alpine
 
 WORKDIR /app
 
-COPY mvnw .
-COPY .mvn .mvn
+COPY target/music-m-0.0.1-SNAPSHOT.jar /app/music-m.jar
 
-COPY pom.xml .
-
-RUN ./mvnw dependency:go-offline -B
-
-COPY src src
-
-RUN ./mvnw package -DskipTests
-RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
-
-
-#### Stage 2: A minimal docker image with command to run the app
-FROM eclipse-temurin:17-jdk-alpine
-
-ARG DEPENDENCY=/app/target/dependency
-
-COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
-COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
-COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
-
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -cp app:app/lib/* com.jumpstart.music.MusicApplication"]
+ENTRYPOINT ["java","-jar", "music-m.jar"]

@@ -217,7 +217,10 @@ class MusicSchool extends Component {
                   </button>
                 </div>
                 <div>
-                  <span className="d-flex justify-content-center">
+                  <span
+                    className="d-flex justify-content-center"
+                    data-test="enroll-now-test"
+                  >
                     <Link
                       to={"/enroll"}
                       className="bg-dark text-light enroll-now mt-4 rounded"

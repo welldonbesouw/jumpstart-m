@@ -143,6 +143,7 @@ class Enroll extends Component {
                         value={this.state.fullName}
                         onChange={this.onChangeFullName}
                         validations={[required]}
+                        data-test="school-fullname"
                       />
                     </div>
                     <div className="mb-3">
@@ -157,6 +158,7 @@ class Enroll extends Component {
                         value={this.state.age}
                         onChange={this.onChangeAge}
                         validations={[required]}
+                        data-test="school-age"
                       />
                     </div>
                     <div className="mb-3">
@@ -171,6 +173,7 @@ class Enroll extends Component {
                         value={this.state.phoneNumber}
                         onChange={this.onChangePhoneNumber}
                         validations={[required]}
+                        data-test="school-phone-number"
                       />
                     </div>
                     <div className="mb-3">
@@ -184,6 +187,7 @@ class Enroll extends Component {
                         value={this.state.instrument}
                         onChange={this.onChangeInstrument}
                         validations={[required]}
+                        data-test="school-instrument"
                       >
                         <option value="">Select an Instrument</option>
                         <option value="Piano">Piano</option>
@@ -208,6 +212,7 @@ class Enroll extends Component {
                         value={this.state.delivery}
                         onChange={this.onChangeDelivery}
                         validations={[required]}
+                        data-test="school-method"
                       >
                         <option value="">Select delivery method</option>
                         <option value="inPerson">In-person</option>
@@ -218,6 +223,7 @@ class Enroll extends Component {
                     <button
                       type="submit"
                       className="btn btn-dark text-light mt-3 mb-4 fw-bolder"
+                      data-test="enroll-button-test"
                     >
                       Enroll
                     </button>

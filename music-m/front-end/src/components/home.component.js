@@ -78,6 +78,7 @@ const Home = () => {
             type="button"
             data-bs-target="#carouselFade"
             data-bs-slide="prev"
+            data-test="prev-button"
           >
             <span
               className="carousel-control-prev-icon btn btn-dark"
@@ -90,6 +91,7 @@ const Home = () => {
             type="button"
             data-bs-target="#carouselFade"
             data-bs-slide="next"
+            data-test="next-button"
           >
             <span
               className="carousel-control-next-icon btn btn-dark"
@@ -100,7 +102,9 @@ const Home = () => {
         </div>
         <div className="product-container">
           <div className="d-flex align-items-center justify-content-between mb-4">
-            <h1 className="ms-3 mb-0 fw-bold">Featured</h1>
+            <h1 className="ms-3 mb-0 fw-bold" data-test="featured-test">
+              Featured
+            </h1>
             <Button variant="dark" className="me-4">
               See All
             </Button>
@@ -132,7 +136,9 @@ const Home = () => {
         </div>
         <div className="product-container">
           <div className="d-flex align-items-center justify-content-between mb-4">
-            <h1 className="ms-3 mb-0 fw-bold">New Products</h1>
+            <h1 className="ms-3 mb-0 fw-bold" data-test="new-products-test">
+              New Products
+            </h1>
             <Button variant="dark" className="me-4">
               See All
             </Button>

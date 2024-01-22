@@ -221,6 +221,7 @@ class LoginRegister extends Component {
                         onChange={this.onChangeUsernameL}
                         validations={[required]}
                         disabled={activeGroup === "register"} // Disable inputs when active group is "register"
+                        data-test="login-username"
                       />
                     </div>
                     <div className="form-group">
@@ -236,6 +237,7 @@ class LoginRegister extends Component {
                         onChange={this.onChangePasswordL}
                         validations={[required]}
                         disabled={activeGroup === "register"}
+                        data-test="login-password"
                       />
                     </div>
                     <div className="form-group form-check">
@@ -258,6 +260,7 @@ class LoginRegister extends Component {
                         disabled={
                           this.state.loading || activeGroup === "register"
                         }
+                        data-test="login-button"
                       >
                         Login
                       </button>
@@ -307,6 +310,7 @@ class LoginRegister extends Component {
                         maxLength="20"
                         className="form-control w-100 mb-2"
                         disabled={activeGroup === "login"} // Disable inputs when active group is "login"
+                        data-test="register-username"
                       />
                       {emptyAlert && (
                         <div className="alert alert-danger mt-0" role="alert">
@@ -333,6 +337,7 @@ class LoginRegister extends Component {
                         className="form-control w-100 mb-2"
                         aria-describedby="emailHelp"
                         disabled={activeGroup === "login"}
+                        data-test="register-email"
                       />
                     </div>
                     {emptyAlert && (
@@ -361,6 +366,7 @@ class LoginRegister extends Component {
                         maxLength="50"
                         className="form-control w-100 mb-2"
                         disabled={activeGroup === "login"}
+                        data-test="register-password"
                       />
                     </div>
                     {emptyAlert && (
@@ -388,6 +394,7 @@ class LoginRegister extends Component {
                         className="btn btn-dark btn-block w-100 fw-bold"
                         type="submit"
                         disabled={activeGroup === "login"}
+                        data-test="register-button"
                       >
                         Register
                       </button>

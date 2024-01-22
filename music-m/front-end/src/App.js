@@ -79,7 +79,7 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
             <div className="navbar-nav my-1 py-1">
-              <li className="nav-item ms-1 me-1 d-flex">
+              <li className="nav-item ms-1 me-1 d-flex" data-test="home-test">
                 <Link
                   to={"/"}
                   className="nav-link text-light btn btn-dark px-3"
@@ -93,10 +93,14 @@ function App() {
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  data-test="brands-button-test"
                 >
                   Brands
                 </button>
-                <ul className="dropdown-menu dropdown-menu-dark columns-3">
+                <ul
+                  className="dropdown-menu dropdown-menu-dark columns-3"
+                  data-test="brands-list-test"
+                >
                   <li>
                     <Link to={"#"} className="dropdown-item">
                       Akai
@@ -289,7 +293,10 @@ function App() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item ms-1 me-1 d-flex">
+              <li
+                className="nav-item ms-1 me-1 d-flex"
+                data-test="music-school-test"
+              >
                 <Link
                   to={"/musicSchool"}
                   className="nav-link text-light btn btn-dark px-3"
@@ -301,6 +308,7 @@ function App() {
                 <Link
                   to={"/repairs"}
                   className="nav-link text-light btn btn-dark px-3"
+                  data-test="repairs-test"
                 >
                   Repairs
                 </Link>
@@ -402,7 +410,10 @@ function App() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item ms-1 me-1 d-flex">
+              <li
+                className="nav-item ms-1 me-1 d-flex"
+                data-test="my-account-test"
+              >
                 {currentUser ? (
                   <Link
                     to={"/me/myAccount"}
@@ -428,8 +439,13 @@ function App() {
                     value={keyword}
                     onChange={handleChange}
                     className="form-control me-2 search-input"
+                    data-test="search-input-test"
                   />
-                  <button className="btn btn-light" type="submit">
+                  <button
+                    className="btn btn-light"
+                    type="submit"
+                    data-test="search-button-test"
+                  >
                     <BiSearch />
                   </button>
                 </form>
