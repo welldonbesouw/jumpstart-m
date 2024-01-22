@@ -293,6 +293,7 @@ class MyAccount extends Component {
                     type="button"
                     className="btn btn-dark text-light"
                     onClick={() => this.closeModal()}
+                    data-test="modal-ok"
                   >
                     OK
                   </button>

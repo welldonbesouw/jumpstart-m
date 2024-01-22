@@ -103,7 +103,9 @@ describe("My Account Test", () => {
     cy.getDataTest("email").clear().type("kevinsanjaya@yahoo.com");
     cy.getDataTest("address").clear().type("Jalan Medan Merdeka No. 1");
     cy.getDataTest("update-button").click();
-    cy.wait(2000);
+    cy.wait(3000);
+    cy.getDataTest("modal-ok").click();
+    cy.wait(1000);
 
     cy.fixture("the-rock.png").then(() => {
       cy.get('input[type="file"]').attachFile("the-rock.png");
