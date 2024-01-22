@@ -1,5 +1,4 @@
 import "cypress-file-upload";
-import { BiRocket } from "react-icons/bi";
 
 describe("first-test", () => {
   beforeEach(() => {
